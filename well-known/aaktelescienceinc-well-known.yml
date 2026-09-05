@@ -1,0 +1,133 @@
+generated: '2026-09-05'
+method: probed
+source: live HTTP probes of every host this record knows (registrable domain + www, the API
+  baseURL host, and the host that serves the company's drf-yasg schema)
+note: >-
+  No /.well-known document is served anywhere. aakscience.com and www.aakscience.com are a
+  single React SPA whose origin answers 200 with the same 3KB index shell for EVERY path,
+  including /.well-known/* and paths that do not exist — those 200s are shells, not documents,
+  and are recorded as misses. django.aakscience.com answers 401 with a zero-length body for
+  every path including a control path that does not exist, so the 401 is a blanket edge wall
+  rather than evidence a document exists. django-dev.aakscience.com returns a Django 404 for
+  every /.well-known/* path. No WellKnown or SecurityTxt pointer is emitted, because nothing
+  was served.
+hosts:
+- host: aakscience.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    file: null
+    note: SPA index shell, not a document
+  - path: /.well-known/openid-configuration
+    status: 200
+    file: null
+    note: SPA index shell, not a document
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    file: null
+    note: SPA index shell, not a document
+  - path: /.well-known/api-catalog
+    status: 200
+    file: null
+    note: SPA index shell, not a document
+  - path: /.well-known/ai-plugin.json
+    status: 200
+    file: null
+    note: SPA index shell, not a document
+  - path: /.well-known/agent-card.json
+    status: 200
+    file: null
+    note: SPA index shell, not a document
+  - path: /.well-known/agent.json
+    status: 200
+    file: null
+    note: SPA index shell, not a document
+- host: www.aakscience.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    file: null
+    note: SPA index shell, not a document
+  - path: /.well-known/openid-configuration
+    status: 200
+    file: null
+    note: SPA index shell, not a document
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    file: null
+    note: SPA index shell, not a document
+  - path: /.well-known/api-catalog
+    status: 200
+    file: null
+    note: SPA index shell, not a document
+  - path: /.well-known/ai-plugin.json
+    status: 200
+    file: null
+    note: SPA index shell, not a document
+  - path: /.well-known/agent-card.json
+    status: 200
+    file: null
+    note: SPA index shell, not a document
+  - path: /.well-known/agent.json
+    status: 200
+    file: null
+    note: SPA index shell, not a document
+- host: django.aakscience.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 401
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 401
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 401
+    file: null
+  - path: /.well-known/api-catalog
+    status: 401
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 401
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 401
+    file: null
+  - path: /.well-known/agent.json
+    status: 401
+    file: null
+- host: django-dev.aakscience.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
+controls:
+- host: aakscience.com
+  path: /zzz-nonexistent-path-9f8a7b
+  status: 200
+  interpretation: catch-all SPA shell — a 200 here is not evidence of a document
+- host: django.aakscience.com
+  path: /zzz-nonexistent-path-9f8a7b/
+  status: 401
+  interpretation: blanket auth wall — a 401 here is not evidence a path exists
+- host: django-dev.aakscience.com
+  path: /zzz-nonexistent-9f8a/
+  status: 404
+  interpretation: honest 404 — this host distinguishes real paths from missing ones

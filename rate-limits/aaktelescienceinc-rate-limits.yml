@@ -1,0 +1,22 @@
+generated: '2026-09-05'
+method: searched
+source: https://aakscience.com/ (site + sitemap walked; no developer portal, docs host or API
+  reference exists to search)
+limit_count: 0
+limits: []
+headers: []
+note: >-
+  No published rate limits. AAK Tele-Science operates no developer portal, no documentation
+  host and no public API reference — the sitemap lists only marketing, registration, legal and
+  subscription routes — so there is nowhere the company states a quota, window, burst or
+  exhaustion status code. Limits could not be observed at runtime either: the production API
+  host django.aakscience.com answers HTTP 401 with a zero-length body and no headers on every
+  path, so no RateLimit-*, X-RateLimit-* or Retry-After signal is visible to an unauthenticated
+  client. An honest zero: checked, nothing published, nothing observable.
+evidence:
+- url: https://aakscience.com/sitemap.xml
+  status: 200
+  note: no /developers, /docs, /api or reference route listed
+- url: https://django.aakscience.com/api/
+  status: 401
+  note: zero-length body, no rate-limit response headers

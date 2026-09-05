@@ -1,0 +1,21 @@
+generated: '2026-09-05'
+method: probed
+source: https://aakscience.com/subscriptions
+plan_count: 0
+currency: null
+note: >-
+  AAK Tele-Science publishes a subscriptions page and lists it in its own sitemap.xml, so the
+  company does sell tiered access to the platform. The page could not be read: aakscience.com
+  is a client-rendered React SPA and every route, including /subscriptions, is served as the
+  same 3,163-byte index shell with no plan content in the HTML. There is no machine-readable
+  pricing or catalog endpoint, and the API host is auth-walled, so no tier, price, quota or
+  overage could be recorded without inventing it. plan_count is an honest zero meaning
+  "checked, nothing readable", not "the provider publishes no plans".
+plans: []
+evidence:
+- url: https://aakscience.com/subscriptions
+  status: 200
+  note: 200 returns the SPA index shell (3,163 bytes); no pricing content server-rendered
+- url: https://aakscience.com/sitemap.xml
+  status: 200
+  note: provider's own sitemap declares /subscriptions as a real route

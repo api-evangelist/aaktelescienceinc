@@ -1,8 +1,17 @@
 aid: aaktelescienceinc
-name: Aaktelescienceinc
-description: 'Aaktelescienceinc is a company surfaced via the API Evangelist harvest backlog (source:
-  secondary-market) and added to the network as a stub for full-pipeline profiling.'
+name: AAK Tele-Science, Inc.
+description: 'AAK Tele-Science, Inc. (aakscience.com) is a Davis, California software
+  company founded in 2020 that operates a cloud-based collaborative platform for the
+  global scientific research community. The AAK platform connects researchers, institutions,
+  service providers, venture capitalists and investors around shared research projects,
+  layering machine-learning-assisted discovery, predictive analytics and a data-fragmentation
+  privacy protocol over a subscription SaaS product. The platform is delivered as a
+  React single-page application backed by a Django REST API at django.aakscience.com;
+  that API is real but is not publicly documented — its drf-yasg schema endpoints require
+  HTTP authentication and the production API host answers 401 to every path, so no
+  machine-readable contract is reachable without credentials.'
 url: https://raw.githubusercontent.com/api-evangelist/aaktelescienceinc/refs/heads/main/apis.yml
+image: https://aakscience.com/aak.webp
 x-type: company
 x-source: harvest:secondary-market
 x-tier: stub
@@ -12,12 +21,86 @@ created: '2026-09-05'
 modified: '2026-09-05'
 tags:
 - Company
-apis: []
+- Research
+- Science
+- Collaboration
+- Analytics
+- Machine Learning
+- SaaS
+- Data
+position: Producing
+apis:
+- name: AAK Tele-Science API
+  description: 'The private Django REST API that backs the AAK Tele-Science platform.
+    The application frontend at aakscience.com preconnects to django.aakscience.com,
+    and the company runs a drf-yasg (Swagger) schema on the same codebase, but every
+    path on the production host — including paths that do not exist — returns HTTP
+    401 with an empty body, and the schema endpoints answer "Swagger authentication
+    required". No public reference, no published OpenAPI, and no developer portal
+    were found.'
+  humanURL: https://aakscience.com
+  baseURL: https://django.aakscience.com
+  image: https://aakscience.com/aak.webp
+  tags:
+  - Research
+  - Collaboration
+  - Analytics
+  properties: []
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/aaktelescienceinc-domain-security.yml
 - type: Website
-  url: https://equityzen.com/company/aaktelescienceinc
+  url: https://aakscience.com
+- type: GitHubOrganization
+  url: https://github.com/AAK-Tele-Science
+- type: LinkedIn
+  url: https://www.linkedin.com/company/aak-telesciences
+- type: Pricing
+  url: https://aakscience.com/subscriptions
+- type: SignUp
+  url: https://aakscience.com/sign-up
+- type: Login
+  url: https://aakscience.com/login
+- type: TermsOfService
+  url: https://aakscience.com/terms-and-conditions
+- type: PrivacyPolicy
+  url: https://aakscience.com/privacy-policy
+- type: Support
+  url: https://aakscience.com/contact
+- type: Blog
+  url: https://aakscience.com/newBlogs
+- type: LLMsTxt
+  url: llms/aaktelescienceinc-llms.txt
+- type: Plans
+  url: plans/aaktelescienceinc-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/aaktelescienceinc-rate-limits.yml
+x-enrichment:
+  date: '2026-09-05'
+  status: minimal
+  artifacts_added: 5
+  pass: local-v3
+x-coverage:
+  state: gated
+  reason: customer-only-docs
+  detail: >-
+    AAK Tele-Science runs a real Django REST API behind django.aakscience.com, but its
+    drf-yasg schema endpoints answer "Swagger authentication required" and the production
+    API host returns HTTP 401 with a zero-length body on every path — including a control
+    path that does not exist — so the contract is readable only by an authenticated
+    subscriber, and no public developer portal or reference exists to fall back to.
+  evidence:
+  - url: https://django-dev.aakscience.com/.json
+    status: 401
+  - url: https://django.aakscience.com/api/
+    status: 401
+  - url: https://django.aakscience.com/zzz-nonexistent-path-9f8a7b/
+    status: 401
+  - url: https://aakscience.com/sitemap.xml
+    status: 200
+  checked: '2026-09-05'
