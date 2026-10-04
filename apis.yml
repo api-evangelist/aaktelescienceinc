@@ -1,5 +1,5 @@
 aid: aaktelescienceinc
-name: AAK Tele-Science, Inc.
+name: AAK Tele-Science
 description: 'AAK Tele-Science, Inc. (aakscience.com) is a Davis, California software
   company founded in 2020 that operates a cloud-based collaborative platform for the
   global scientific research community. The AAK platform connects researchers, institutions,
@@ -25,7 +25,7 @@ tags:
 - Science
 - Collaboration
 - Analytics
-- Machine-Learning
+- Machine Learning
 - Software-as-a-Service
 - Data
 tags_raw:
@@ -37,6 +37,7 @@ tags_raw:
 - Machine Learning
 - SaaS
 - Data
+- Machine-Learning
 position: Producing
 apis:
 - name: AAK Tele-Science API
@@ -113,3 +114,4 @@ x-coverage:
   - url: https://aakscience.com/sitemap.xml
     status: 200
   checked: '2026-09-05'
+x-legal-name: AAK Tele-Science, Inc.
