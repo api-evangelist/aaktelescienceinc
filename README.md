@@ -1,4 +1,4 @@
-# Aaktelescienceinc
+# AAK Tele-Science
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,5 +64,102 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Aaktelescienceinc is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
-- https://equityzen.com/company/aaktelescienceinc
+AAK Tele-Science, Inc. (aakscience.com) is a Davis, California software company founded in 2020 that operates a cloud-based collaborative platform for the global scientific research community. The AAK platform connects researchers, institutions, service providers, venture capitalists and investors around shared research projects, layering machine-learning-assisted discovery, predictive analytics and a data-fragmentation privacy protocol over a subscription SaaS product. The platform is delivered as a React single-page application backed by a Django REST API at django.aakscience.com; that API is real but is not publicly documented — its drf-yasg schema endpoints require HTTP authentication and the production API host answers 401 to every path, so no machine-readable contract is reachable without credentials.
+
+**Areas:** Company · Research · Science · Collaboration · Analytics · Machine Learning · Software-as-a-Service · Data
+
+## AAK Tele-Science on APIs.io
+
+Everything profiled for AAK Tele-Science is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/aaktelescienceinc/](https://apis.io/providers/aaktelescienceinc/)** — or go straight to one of the APIs or properties below.
+
+### APIs (1)
+
+- [AAK Tele-Science API](https://apis.io/apis/aaktelescienceinc/aak-tele-science-api/) — The private Django REST API that backs the AAK Tele-Science platform. The application frontend at aakscience.com preconnects to django.aakscience.com, and…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Security (1)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Aaktelescienceinc Domain Security](https://apis.io/security/aaktelescienceinc/aaktelescienceinc-domain-security/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Aaktelescienceinc Plans Pricing](https://apis.io/plans/aaktelescienceinc/aaktelescienceinc-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Aaktelescienceinc Rate Limits](https://apis.io/rate-limits/aaktelescienceinc/aaktelescienceinc-rate-limits/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://aakscience.com)
+- [Pricing](https://aakscience.com/subscriptions)
+- [Sign up](https://aakscience.com/sign-up)
+- [Support](https://aakscience.com/contact)
+- [Blog](https://aakscience.com/newBlogs)
+- [Terms of service](https://aakscience.com/terms-and-conditions)
+- [Privacy policy](https://aakscience.com/privacy-policy)
+- [GitHub](https://github.com/AAK-Tele-Science)
+
+## API Evangelist rating
+
+**Kin Score 6.8** — minimal · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 66.1 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 2.6 |
+| Developer ergonomics | 0.0 |
+| Access clarity | 6.6 |
+
+**Agent readiness 2.5** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 5.5** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/aaktelescienceinc/](https://apis.io/providers/aaktelescienceinc/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for AAK Tele-Science: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/aaktelescienceinc/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
